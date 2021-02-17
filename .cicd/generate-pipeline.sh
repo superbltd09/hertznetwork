@@ -154,7 +154,7 @@ EOF
           always-pull: true
           debug: true
           wait-network: true
-          pre-execute-ping-sleep: 8.8.8.8
+          pre-execute-ping-sleep: "github.com"
           failover-registries:
             - 'registry_1'
             - 'registry_2'
@@ -237,7 +237,7 @@ EOF
           always-pull: true
           debug: true
           wait-network: true
-          pre-execute-ping-sleep: 8.8.8.8
+          pre-execute-ping-sleep: "github.com"
           failover-registries:
             - 'registry_1'
             - 'registry_2'
@@ -291,7 +291,7 @@ EOF
           always-pull: true
           debug: true
           wait-network: true
-          pre-execute-ping-sleep: 8.8.8.8
+          pre-execute-ping-sleep: "github.com"
           failover-registries:
             - 'registry_1'
             - 'registry_2'
@@ -348,7 +348,7 @@ EOF
           always-pull: true
           debug: true
           wait-network: true
-          pre-execute-ping-sleep: 8.8.8.8
+          pre-execute-ping-sleep: "github.com"
           failover-registries:
             - 'registry_1'
             - 'registry_2'
@@ -407,7 +407,7 @@ EOF
           always-pull: true
           debug: true
           wait-network: true
-          pre-execute-ping-sleep: 8.8.8.8
+          pre-execute-ping-sleep: "github.com"
           failover-registries:
             - 'registry_1'
             - 'registry_2'
@@ -622,7 +622,7 @@ cat <<EOF
           always-pull: true
           debug: true
           wait-network: true
-          pre-execute-ping-sleep: 8.8.8.8
+          pre-execute-ping-sleep: "github.com"
           failover-registries:
             - 'registry_1'
             - 'registry_2'
@@ -647,7 +647,7 @@ cat <<EOF
           always-pull: true
           debug: true
           wait-network: true
-          pre-execute-ping-sleep: 8.8.8.8
+          pre-execute-ping-sleep: "github.com"
           failover-registries:
             - 'registry_1'
             - 'registry_2'
@@ -672,7 +672,7 @@ cat <<EOF
           always-pull: true
           debug: true
           wait-network: true
-          pre-execute-ping-sleep: 8.8.8.8
+          pre-execute-ping-sleep: "github.com"
           failover-registries:
             - 'registry_1'
             - 'registry_2'
