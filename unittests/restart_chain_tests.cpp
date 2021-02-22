@@ -669,7 +669,7 @@ BOOST_AUTO_TEST_CASE(test_blocklog_split_then_merge) {
    bfs::remove(retained_dir / "blocks-51-100.log");
    bfs::remove(retained_dir / "blocks-51-100.index");
 
-   BOOST_CHECK_NO_THROW(block_log::merge_blocklogs(retained_dir, dest_dir.path()));
+   block_log::merge_blocklogs(retained_dir, dest_dir.path());
    BOOST_CHECK(bfs::exists( dest_dir.path() / "blocks-50-50.log" ));
    BOOST_CHECK(bfs::exists( dest_dir.path() / "blocks-50-50.index" ));
 
