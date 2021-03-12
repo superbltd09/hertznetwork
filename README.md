@@ -1,6 +1,6 @@
 # Hertz Network
 
-Welcome to the Hertz source code repository! This software enables businesses to rapidly build and deploy high-performance and high-security blockchain-based applications.
+Welcome to the Hertz Network source code repository! This software enables businesses to rapidly build and deploy high-performance and high-security blockchain-based applications.
 Hertz Network is a clone of EOSIO.
 
 Some of the groundbreaking features of Hertz include:
