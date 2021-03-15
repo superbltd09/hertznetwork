@@ -29,11 +29,12 @@ Hertz currently supports the following operating systems:
 5. MacOS 10.14 (Mojave)
 
 ## Setup
-sudo apt-get update 
+
 - sudo apt-get update 
 - git clone --recursive https://github.com/hertznetwork/hertznetwork
 - cd hertznetwork
-- run these following commands:
+
+run these following commands:
 * ./scripts/eosio_build.sh -i /root/hertz
 * ./scripts/eosio_install.sh
 
