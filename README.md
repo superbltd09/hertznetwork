@@ -36,6 +36,7 @@ Hertz currently supports the following operating systems:
 
 run these following commands:
 * ./scripts/eosio_build.sh -i /root/hertz
+* cd hertznetwork
 * ./scripts/eosio_install.sh
 
 ## Contributing
