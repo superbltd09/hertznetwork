@@ -9,18 +9,20 @@ This section contains shell commands to manually download, build, install, test,
 
 Select a task below, then copy/paste the shell commands to a Unix terminal to execute:
 
-* [Download EOSIO Repository](#download-eosio-repository)
-* [Install EOSIO Dependencies](#install-eosio-dependencies)
-* [Build EOSIO](#build-eosio)
-* [Install EOSIO](#install-eosio)
-* [Test EOSIO](#test-eosio)
-* [Uninstall EOSIO](#uninstall-eosio)
+- [Download EOSIO Repository](#download-eosio-repository)
+- [Install EOSIO Dependencies](#install-eosio-dependencies)
+- [Build EOSIO](#build-eosio)
+- [Install EOSIO](#install-eosio)
+- [Test EOSIO](#test-eosio)
+- [Uninstall EOSIO](#uninstall-eosio)
 
 [[info | Building EOSIO on another OS?]]
 | Visit the [Build EOSIO from Source](../../index.md) section.
 
 ## Download EOSIO Repository
+
 These commands set the EOSIO directories, install git, and clone the EOSIO repository.
+
 ```sh
 # set EOSIO directories
 export EOSIO_LOCATION=~/eosio/eos
@@ -34,7 +36,9 @@ cd $EOSIO_LOCATION && git submodule update --init --recursive
 ```
 
 ## Install EOSIO Dependencies
+
 These commands install the EOSIO software dependencies. Make sure to [Download the EOSIO Repository](#download-eosio-repository) first and set the EOSIO directories.
+
 ```sh
 # install dependencies
 yum update -y && \
@@ -58,7 +62,7 @@ cd $EOSIO_INSTALL_LOCATION && curl -LO https://cmake.org/files/v3.13/cmake-3.13.
 # apply clang patch
 cp -f $EOSIO_LOCATION/scripts/clang-devtoolset8-support.patch /tmp/clang-devtoolset8-support.patch
 # build boost
-cd $EOSIO_INSTALL_LOCATION && curl -LO https://dl.bintray.com/boostorg/release/1.71.0/source/boost_1_71_0.tar.bz2 && \
+cd $EOSIO_INSTALL_LOCATION && curl -LO https://boostorg.jfrog.io/artifactory/main/release/1.71.0/source/boost_1_71_0.tar.bz2 && \
     source /opt/rh/devtoolset-8/enable && \
     tar -xjf boost_1_71_0.tar.bz2 && \
     cd boost_1_71_0 && \
@@ -93,6 +97,7 @@ cd $EOSIO_INSTALL_LOCATION && curl -L https://github.com/mongodb/mongo-cxx-drive
 ```
 
 ## Build EOSIO
+
 These commands build the EOSIO software on the specified OS. Make sure to [Install EOSIO Dependencies](#install-eosio-dependencies) first.
 
 [[caution | `EOSIO_BUILD_LOCATION` environment variable]]
@@ -106,20 +111,26 @@ cd $EOSIO_BUILD_LOCATION && make -j$(nproc)
 ```
 
 ## Install EOSIO
+
 This command installs the EOSIO software on the specified OS. Make sure to [Build EOSIO](#build-eosio) first.
+
 ```sh
 cd $EOSIO_BUILD_LOCATION && make install
 ```
 
 ## Test EOSIO
+
 These commands validate the EOSIO software installation on the specified OS. This task is optional but recommended. Make sure to [Install EOSIO](#install-eosio) first.
+
 ```sh
 $EOSIO_INSTALL_LOCATION/bin/mongod --fork --logpath $(pwd)/mongod.log --dbpath $(pwd)/mongodata
 cd $EOSIO_BUILD_LOCATION && source /opt/rh/rh-python36/enable && make test
 ```
 
 ## Uninstall EOSIO
+
 These commands uninstall the EOSIO software from the specified OS.
+
 ```sh
 xargs rm < $EOSIO_BUILD_LOCATION/install_manifest.txt
 rm -rf $EOSIO_BUILD_LOCATION
