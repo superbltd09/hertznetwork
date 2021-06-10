@@ -32,7 +32,6 @@ Hertz currently supports the following operating systems:
 
 - sudo apt-get update 
 - git clone --recursive https://github.com/hertznetwork/hertznetwork
-- cd hertznetwork
 
 run these following commands:
 * cd hertznetwork
